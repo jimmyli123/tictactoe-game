@@ -53,7 +53,8 @@ def choose_first():
 
 # Returns a boolean indicating whether a space on board is freely available
 def space_check(board,position):
-	pass
+	if board[position]:
+		return True
 
 # Function that checks if the board is full and returns a boolean value. True if full, False otherwise
 def full_board_check(board):
@@ -62,11 +63,16 @@ def full_board_check(board):
 # Function asking for player's next position and uses the space_check function to check if it's a free position.
 # If it is free, return for later use
 def player_choice(board):
+	print("Please choose your position: ")
 	pass
 
 # Asks if player wants to play again and returns Boolean True if they do
 def replay():
-	pass
+	play_again = input("Would you like to play again")
+	if "y" in play_again.lower():
+		return True
+	else:
+		return False
 
 
 
